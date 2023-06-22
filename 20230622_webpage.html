@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--[1] 해상도- 최적해상도1250px 결정(최대/최소 마지막점검)-->
+<!--[2] content 영역 1040px 800vw 90% 배치(중앙,왼쪽)-->
+<!--[3] reset.css 폴더경로 -->
+<link href="/resources/css/reset.css" rel="stylesheet">
+<!--TODO js jQuery-->
+<!--[4] preject명 또는 core.css 폴더경로 boorstrap, template 등으로 대체 가능-->
+<!--[4] 기본색상 10~15개정도 class 미리 만들어두기-->
+<!--[4] 폰트크기 5~7개정도 class 미리 만들어두기-->
+<!--[4] button 3개 class 미리 만들어두기-->
+
+<!--[5] Layout 영역-->
+<style>
+    .wrap.header{
+        background: bisque;
+        border: 1px solid black;
+    }
+    .wrap.content{
+        background: beige;
+        border: 1px solid black;
+    }
+    .wrap.footer{
+        background: bisque;
+        border: 1px solid black;
+    }
+    header, #content, footer{
+        /*중앙정렬*/
+        width: 80vw; margin: 0 auto;
+        border: 1px solid black;
+    }
+    #content {
+        overflow: hidden;
+    }
+    /* section */
+    section{
+        width: 80%; float: left;
+    }
+    /* aside */
+    aside{
+        width: 20%; float: right;
+    }
+</style>
+</head>
+
+<body>
+    <div class="wrap header">
+        <header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fugiat adipisci mollitia, at nostrum illocommodi, facilis eveniet iste quidem ut recusandae itaque ipsum tempora, vel modi porro veritatis quo?
+            </p>
+        </header>
+    </div>
+        <div class="wrap content">
+            <div id="content">
+            <section>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis est qui vero corporis soluta iure dolorum et sed neque tempora. Officia praesentium veniam illum fuga minima aliquid, omnis repudiandae quaerat.</p>
+            </section>
+            <aside>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed iste saepe repellat ratione. Aspernatur voluptatem totam et molestias vel illo eius dolor corporis, dignissimos rerum quaerat fugiat sed, beatae tempora!</p>
+            </aside>
+        </div>
+        </div>
+        <div class="wrap footer">
+        
+        <footer>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, beatae cumque distinctio vero quae voluptatibus, fugit reprehenderit odio facilis odit quia doloremque rerum illum accusamus impedit fuga? Blanditiis, iure molestiae.</p>
+        </footer>
+        </div>
+</body>
+
+</html>
