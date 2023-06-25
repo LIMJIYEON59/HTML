@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스 항목의 배치 방향과 줄바꿈 적용하기</title>
+    <style>
+        .container{
+            background-color: #eee;
+            border: 1px solid #222;
+            margin-bottom: 30px;
+            display: flex;
+            width: 700px;
+        }
+        .box {
+            background-color: #222;
+            width: 80px;
+            padding: 5px 40px;
+            margin: 5px;
+        }
+        p{
+            color: white;
+            text-align: center;
+        }
+        #opt1 {flex-flow: row nowrap;}
+        #opt2 {flex-flow: row wrap;}
+    </style>
+</head>
+<body>
+    <div class="container" id="opt1">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+        <div class="box"><p>6</p></div>
+    </div>
+    <div class="container" id="opt2">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+        <div class="box"><p>6</p></div>
+    </div>
+</body>
+</html>
