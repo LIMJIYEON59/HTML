@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        body {
+            background-color: antiquewhite;
+        }
+
+        ul {
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form> form태그자체는 gui적인 특징 없음. 이동할 페이지에 전달하려는 데이터의 묶음을 처리함.
+        <br>자식태그로 input 또는 select 같은 태그들이 존재해야 의미가 있음
+    </form>
+    <form>
+        <input type="text">
+        <input type="text">
+    </form>
+    <form>
+        <input type="text">
+        <input type="text">
+    </form>
+    <hr>
+
+    <nav>상단메뉴 또는 사이드 메뉴</nav>
+    <aside>사이드배너광고 또는 바로가기링크</aside>
+
+    <header>
+        주로 log title 상단메뉴
+    </header>
+    <div id="wrap_content">
+        <section>
+            <article>
+                주요상품목록
+            </article>
+            <article>
+                테마별상품목록
+            </article>
+        </section>
+    </div>
+    <footer>
+        연락처,저작권등
+    </footer>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gz14w85UW_0?start=2"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+
+        <div>모든 태그에 id 속성 지정 가능함.
+            id 속성값은 페이지내 unique한 값이 들어가야함.</div>
+        <iframe src="a.html" width="500" height="500"></iframe>
+    </div>
+    <hr>
+    <h7 id="p2">말도안되는 태그 사용</h7>
+    <hr id="p2">
+    <img id="p2" width="200" src="./resources/images/visa.svg" /> 닫히는 태그 없는 태그
+    <hr>
+    <img id="p3" width="200"" src=" ./resources/images/costco.png" alt="이미지파일이 손상되거나 경로가 맞지 않을 때 나타나는 문구"> 닫히는 태그 없는 태그
+    <hr>
+    <img id="p4" height="100" width="200" src="./resources/images/domino.jpg">닫히는 태그 없는 태그
+    <hr>
+    <img width="200" height="100" src="./resources/images/a.svg"> svg는 가로세로 비율 유지하도록 coding 되어있으면 유지됨.
+    <hr>
+    <img width="200" src="./resources/images/a.svg">닫히는 태그 없는 태그
+    <hr>
+    <a href="./a.html">InnerText</a>
+    <hr>
+    <a href="./b.html"><img src="./resources/images/a.svg" width="50" alt="InnerHTML" </a>
+        <hr>
+        <a href="#p2">페이지 내부p2 이동_InnerText또는 InnerHTML</a>
+        <hr>
+        <a href="#p3">
+            <h1><img src="./resources/images/a.svg" width="50" alt="InnerHTML"><img src="./resources/images/a.svg"
+                    width="50" alt="InnerHTML">페이지내부p3 이동_InnerText또는</h1>
+        </a>
+</body>
+
+</html>
