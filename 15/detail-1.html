@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 이벤트</title>
+    <link href="css/event.css" rel="stylesheet">
+</head>
+<body>
+    <div id="item">
+		<img src="images/듄.png" alt="">
+		<button class="over" id="open">상세 설명 보기</button>
+	</div>	
+
+    <script>
+        function showDetail() { //상세 설명을 화면에 표시하는 함수
+            document.querySelector('#desc').style.display ="block";
+            document.querySelector('#open').style.display ="none";
+        }
+
+        function hideDetail() { //상세 설명을 화면에서 감추는 함수
+            document.querySelector('#desc').style.display = "none";
+            document.querySelector('#open').style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
