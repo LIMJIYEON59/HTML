@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ul 구현_02</title>
+    <link rel="stylesheet" href="resources/css/function.css">
+
+</head>
+
+<body>
+
+    <div id="result"></div>
+
+    <div id="button">
+        <button type="button" onclick="changeBg('red')">red</button>
+        <button type="button" onclick="changeBg('blue')">blue</button>
+        <button type="button" onclick="changeBg('yellow')">yellow</button>
+        <button type="button" onclick="changeBg('#ccc')">#ccc</button>
+    </div>
+
+    <script>
+        function changeBg(color) {
+            var result = document.querySelector('#result');
+            result.style.backgroundColor = color;
+        }
+
+        function changeColor(event) {
+            if(event.key == 'Enter') {
+                event.preventDefault();
+
+                var input = document.getElementById("color");
+                var colorCode = input.value;
+               
+                var result = document.getElementById("result");
+                result.style.backgroundColor = colorCode;
+            }
+        }
+    </script>
+    <hr>
+    <div>
+        <form>
+            <label for="color">Color Cde 입력 후 enter</label>
+            <input type="text" id="color" onkeydown="changeColor(event)">
+        </form>
+    </div>
+    <hr>
+    <select>
+    <option value="color">orange</option>
+
+</select>
+</body>
+
+</html>

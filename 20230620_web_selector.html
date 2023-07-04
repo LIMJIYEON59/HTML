@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+
+    <link href="./resources/css/reset.css" rel="stylesheet">
+    <style>
+        @import url(https://fonts.google.com/share?selection.family=Orbit);
+        @import url();
+
+        @font-face {
+            font-family: 'ostrich';
+            src: 
+                local('ostrich Sans')
+                ,
+                url('resources/fonts/ostrich-sans-bold.ttf') format('truetype')
+                ,
+                url('resources/fonts/ostrich-sans-bold.svg') format('svg')     
+                ,
+                url('resources/fonts/ostrich-sans-bold.woff') format('woff')
+                ;
+        }
+        div{
+            /*
+            font-family: 'Ostrich','Orbit','함초롱바탕','Courier New', Courier, monospace;
+            font-size: 28pt;
+            font-weight: 400;
+            font-variant: small-caps;
+            font-style: oblique;
+            */
+
+            font:  small-caps oblique 800 2em  'Ostrich','Orbit','함초롱바탕','Courier New', Courier, monospace;
+            line-height: 50px;
+        }
+
+
+        /* CSS문법 
+        첫번째 p태그에 background yellow, 글자색은 green
+        { background: yellow; color: green; }
+        두번째 p태그에 background red, 글자색은 blue
+        { background: red; color: blue; }
+        세번째 p태그에 background gray, 글자색은 red
+        { background: gray; color: black; }
+
+        #id1 {background-color: yellow; color: green;}
+        #id2 {background-color: red; color: blue; }
+        #id3 {background-color: gray; color: black;}
+
+        p#id1 {background-color: yellow; color: green;}
+        p#id2 {background-color: red; color: blue; }
+        p#id3 {background-color: gray; color: black;}
+
+        p[id=id1] {background-color: yellow; color: green;}
+        p[id=id1] {background-color: red; color: blue; }
+        p[id=id1] {background-color: gray; color: black;}
+
+        p:first-child {background-color: yellow; color: green;}
+        p:nth-child(2) {background-color: red; color: blue; }
+        p:last-child {background-color: gray; color: black;}
+
+        p:first-of-type {background-color: yellow; color: green;}
+        p:nth-of-type(2) {background-color: red; color: blue; }
+        p:last-of-type {background-color: gray; color: black;}
+
+        .c1.ca.cc {background-color: yellow; color: green;}
+        .c2.ca.cb.cc {background-color: red; color: blue; }
+        .c3.cb {background-color: gray; color: black;}
+
+        div .cc.ca{background-color: yellow; color: green;}
+        div .ca.cb.cc{background-color: red; color: blue; }
+        div .cb{background-color: gray; color: black;}
+        */
+
+        
+        p.ca.cc {
+           /*
+            border-width: 5px 10px 5px 2px;
+            border-color: black red blue greenyellow;
+            border-style: solid dashed dotted solid;
+            */
+
+            /*
+            border-width: 5px 10px ;
+            border-color: blue greenyellow;
+            border-style: solid dashed;
+            */
+
+            border-width: 5px 10px 5px 2px;
+            border-color: black red blue greenyellow;
+            border-style: solid dashed dotted;
+            border-radius: 50px 80px 50px 10px;
+            box-shadow: #ddd 0 0 50px inset;
+
+            /*
+            border-top: 5px dashed black;
+            border-left: 1px solid red;
+            border-right: 10px dotted blue;
+            border-bottom: 5px solid black;
+            */
+
+            /*display: inline-block;*/
+            width: 400px;
+            padding: 20px;
+            margin: 20px;
+            background: rgba(250, 250, 00, 0.3); color: green;}
+        p.ca.cb.cc {background:hsl(360, 70%, 80%); color: yellow; }
+        p.cb {background: #ffffff; color: rgb(143, 139, 11);}
+
+       
+    </style>
+</head>
+<body>
+    <div>
+        <pre>
+            오늘
+            점심은
+                 김치찌개
+        </pre>
+    <p id="id1" class="c1 ca cc">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+        Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+        type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+        into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+        Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <a>여기 끼워넣기</a>
+    <p id="id2" class="c2 ca cb cc">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+        Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+        type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+        into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+        Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <a>여기 끼워넣기</a>
+    <p id="id3" class="c3 cb">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+        Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+        type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+        into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+        Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+</body>
+
+</html>

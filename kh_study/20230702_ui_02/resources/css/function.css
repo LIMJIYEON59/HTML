@@ -1,0 +1,26 @@
+a:link, a:visited {
+	color:black;	/*text 색상*/
+	text-decoration: none; 	/* 밑줄을 사라지게 해줌 */
+	/*
+	a:link = 방문 전 링크 상태
+	a:visited = 방문 후 링크 상태
+	a:hover = 마우스 오버했을 때 링크 상태
+	a:active = 클릭했을 때 링크 상태
+	"이것들은 순서대로 적용하는게 좋다" 
+	*/
+}
+#result {
+	width:150px;
+	height:150px;
+	margin-right: 500px;
+	border:2px solid #ccc;
+	float: left;
+	top: 20px;
+}
+
+
+#button {
+	margin-top: 20px;
+	clear: left;
+}
+

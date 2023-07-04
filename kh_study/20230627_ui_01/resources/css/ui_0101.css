@@ -1,0 +1,92 @@
+/* 공지사항 작성하기 */
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#title {
+    width: 50%;
+}
+
+#content {
+    width: 50%;
+    height: 200px;
+    text-align: top;
+
+}
+
+div {
+    margin-left: 15px;
+    margin-bottom: 3px;
+    font-weight: bold;
+
+}
+
+label {
+    width: 75px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.write {
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding-left: 10%;
+}
+
+
+.file-label {
+    padding-right: 0;
+    margin-left: 0;
+}
+
+/* table 파트 */
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    text-align: center;
+    color: white;
+    background-color: rgb(246, 161, 130);
+}
+
+td {
+    text-align: left;
+    background-color: rgba(255, 242, 192, 0.676);
+}
+
+.td-title {
+    width: auto;
+}
+
+.td-number {
+    width: 40px;
+}
+
+.td-button {
+    width: 80px;
+}
+
+.td-writer {
+    width: 120px;
+}
+
+.td-date {
+    width: 150px;
+}
+
+.td-hits {
+    width: 50px;
+}
+
+button {
+    width: 80px;
+    float: right;
+}

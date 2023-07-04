@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+       
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+        <legend>배송 정보</legend>
+        <ul>
+            <li>
+                <label for="r-name">이름</label>
+                <input type="text" id="r-name">
+            </li>
+        </ul>
+            <ul>
+            <li>
+                <label for="r-phon">전화</label>
+                <input type="text" id="r-phon">
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label for="r-email">이메일</label>
+                <input type="text" id="r-email">
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label for="d-day">배송 지정</label>
+                <input type="date" id="d-day"> <small>(주문일로부터 최소 3일 이후)</small>
+            </li>
+        </ul>
+        <ul>
+            <li>
+            <label>메모</label>
+            <textarea id="memo" cols="40" rows="4"></textarea>
+        </li>
+        </ul>
+    </fieldset>
+    </form>
+</body>
+</html>

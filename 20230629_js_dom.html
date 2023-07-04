@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/resources/js/jquery-3.7.0.js"></script>
+</head>
+
+<body>
+    <button type="button" id="btn-1" class="c1">버튼 1</button>
+    <button type="button" id="btn-2" class="c1">버튼 2</button>
+    <button type="button" id="btn-3" class="c1 c2">버튼 3</button>
+    <button type="button" id="btn-4" class="c2">버튼 4</button>
+    <button type="button" id="btn-5" class="c2">버튼 5</button>
+
+    <!-- <button type="button" id="btn_add" onclick="addCilckHandler();">추가</button>
+    <button type="button" id="btn_delete" onclick="deleteClickHandler();">삭제</button> -->
+    <button type="button" id="btn_add">추가</button>
+    <button type="button" id="btn_delete">삭제</button>
+
+    <!-- <div>안녕 난 js로 만들어진 노드야</div> -->
+    <script>
+         $("#btn_add").click(jQaddCilckHandler);
+         $("#btn_delete").click(jQdeleteClickHandler);
+
+        // $("#btn_add").on("click", jQaddCilckHandler); //$() $=함수이름, (click과 함수이름)
+        // $("#btn_delete").on("click", jQdeleteClickHandler);
+
+        //화면에 element 요소노드 및 text노드를 추가
+        function jQaddCilckHandler() {
+            console.log("jQaddClickHandler 호출")
+            var htmlVal = "<div>안녕 난 js로 만들어진 노드야</div>";
+            $("body").append(htmlVal);
+        }
+        //화면에 element 요소노드 및 text노드를 삭제
+        function jQdeleteClickHandler() {
+            console.log("jQdeleteClickHandler 호출")
+            var delElement = $("#btn4");
+            delElement.remove();
+        }
+        $("#btn3").css({borderColor:"red" , backgroundColor:"#333"});
+        $("#btn2").css("border-color" , "blue");
+    </script>
+
+    <script>
+        document.getElementById("btn5").style.backgroundColor = "red";
+        // 어제 : 화면에 element 요소노드를 찾기
+        // 불편 - jQuery 대체
+
+        //이벤트 등록1
+        // document.querySelector("#btn_add").onclick = addCilckHandler;
+        // document.querySelector("#btn_delete").onclick = deleteClickHandler;
+
+        //이벤트 등록2
+        // document.querySelector("#btn_add").addEventListener("click", addCilckHandler);
+        // document.querySelector("#btn_delete").addEventListener("click", deleteClickHandler);
+
+        //화면에 element 요소노드 및 text노드를 추가
+        function addCilckHandler() {
+            var div1 = document.createElement("div");
+            var textnode1 = document.createTextNode("안녕 난 js로 만들어진 노드야");
+            div1.appendChild(textnode1);
+            document.body.appendChild(div1); //body는 꼭 있는 애라서 get어저구 안 써도됨
+        }
+
+        //화면에 element 요소노드 및 text노드를 삭제(4번 노드 삭제)
+        function deleteClickGandler() {
+            var delElement = document.getElementById("btn4");
+            delElement.remove(); //이렇게 하게되면 4번이 사라짐.(근데 보통적인 방법이 아님)
+        }
+
+
+
+    </script>
+</body>
+
+</html>

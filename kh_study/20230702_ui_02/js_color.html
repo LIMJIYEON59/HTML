@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색바꾸기</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script></script>
+    <style>
+        #colorBox {
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        // $(loadedHandler); 가독성
+        window.onload = loadedHandler;
+        function loadedHandler() {
+            // event 등록 -
+            $(".btnsColor > button").on("click", btnColorClockHandler); //함수 이름 정해준다.btnColorClockGandler
+            $(".btn txtColor").on("click", btnColorClockHandler);
+            $("[type=text].txtColor").on("keyip", txtColorClockHandler);
+            $(".selectColor").on("change", ColorChangeHandler); //change가 일어났을 때 this는 밑에 select가 일아닌디
+            
+        }
+        function btnColorClockHandler(e) { //event객체가 e에 담김(e = event)
+            console.log("btn color");
+            console.log(this);
+
+        }
+        function txtColorClockHandler(e) {
+            console.log("txtColor");
+            console.log("#" +$(this).prev().val());   //prev면 그 위에 형님 //$를 적어야 제이쿼리 사용 가능 //=같다. console.log($("txtColor").val());
+            $("#colorBox").css("background-color", "#"+$(this).prev(),val());
+
+        }
+        function btnColorkeyUpHandler(e) { //event객체가 e에 담김(e = event)
+            // console.log("txtColorkeyUoHandler");
+            //console.log(e.keyCode);
+            console.log(e.key);
+
+            //중첩이벤트로 같은 event가 2번 실행됨을 막음
+            //요즘 browser에서 재현이 잘 안됨.
+            //browser에서 중첩이벤트를 거의 발생시키지 않고 있음
+            //key / mouse / drag 관련 event에 사용해 줌.
+            e.stopPropagation(); e.preventDefault();    //중첩이벤트를 없애주는 코드이다
+        
+            if(e,keyCode == 13) {  //if(e.key == "Enter")
+                $("#colorBox").css("background-color", "#" +$(this).val());
+            }
+
+        }
+        function colorChangeHandler(e) {
+            //this - select 요소 전체
+            //this.value는 선택한 option 요소의 value임 // this.value = $(this).val() 같음
+            console.log("colorChange");
+            console.log($(this).val());
+            $("#colorBox").css("background-color", $(this).val());
+        }
+    </script>
+</head>
+
+<body>
+    <div id="colorBox"></div>
+    <div class="btnsColor">
+        <button>yellow</button>
+        <button>greebn</button>
+        <button>blue</button>
+    </div>
+    <div>
+        <div>
+            #을 제외한 RGB 16진수 값을 작성하고 Enter키를 입력하거나 컬러적용 버튼을 눌러주세요.
+        </div>
+        <div>
+            <!---form action 작성하지 않으면 자신의 페이지를 다시 refresh -reload한 결과-->
+            <form>
+            <input type="text" class="txtColor">
+            <!--- type 생략시 submit이다 button을 꼭 작성해야함-->
+            <button class="btn txtColor">컬러적용</button>    <!-- foom 태그 안에서 input박싀만 엔터를 치먀xumi이라ㅔ 잗ㅇ으로 저장된다. -->     
+        </form>   
+     </div>
+    </div>
+    <div>
+        <select class="selectColor"> <!---일어남--->
+            <option value="yellow">yellow</option>
+            <option value="#ffa500">#ffa500</option>
+            <option value="blue">blue</option>
+        </select>
+    </div>
+</body>
+
+</html>
