@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #modal.modal-overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
+      
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    #modal .modal-window {
+            background: #fff;
+            border-radius: 10px;
+            width: 400px;
+            height: 500px;
+            position: relative;
+            top: -100px; /* 모달 창 위로 조정 중앙에 위치? */
+            padding: 10px; /* 내용과 모달 창의 경계 간격을 조절 */
+        }
+</style>
+
+<body>
+    <div id="container">
+        <h2>Lorem Ipsum</h2>
+        <button id="btn-modal">모달 창 열기 버튼</button>
+        <div id="lorem-ipsum"></div>
+    </div>
+    <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="title">
+                <h2>모달</h2>
+            </div>
+            <div class="close-area">X</div>
+            <div class="content">
+                <p>가나다라마바사 아자차카타파하</p>
+                <p>가나다라마바사 아자차카타파하</p>
+                <p>가나다라마바사 아자차카타파하</p>
+                <p>가나다라마바사 아자차카타파하</p>
+
+            </div>
+        </div>
+    </div>
+    <!-- 로넘 -->
+    <script>
+        const loremIpsum = document.getElementById("lorem-ipsum")
+        fetch("https://baconipsum.com/api/?type=all-meat&paras=200&format=html")
+            .then(response => response.text())
+            .then(result => loremIpsum.innerHTML = result)
+    </script>
+    <!-- 모달 창 열기 -->
+    <script>
+        const modal = document.getElementById("modal")
+        const btnModal = document.getElementById("btn-modal")
+        btnModal.addEventListener("click", e => {
+            modal.style.display = "flex"
+        })
+    </script>
+    <!-- x누르면 닫힘 -->
+    <script>
+        const closeBtn = modal.querySelector(".close-area")
+        closeBtn.addEventListener("click", e => {
+            modal.style.display = "none"
+        })
+    </script>
+    <!-- 바깥 영역 클릭시 닫힘 -->
+    <script>
+        modal.addEventListener("click", e => {
+            const evTarget = e.target
+            if (evTarget.classList.contains("modal-overlay")) {
+                modal.style.display = "none"
+            }
+        })
+    </script>
+</body>
+
+</html>
