@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const q1 = ["Jan","Feb","Mar"];
+        const q2 = ["Apr","May","Jun"];
+        const qConnect=[...q1,...q2];
+        console.log(qConnect);
+        q1.push(q2);
+        q1.push(function (){console.log("f1")});
+        console.log(q1);
+        const q3 =[10,20,40,50];
+        let maxValue = Math.max(...q3);
+        console.log(maxValue);
+
+        class Car {
+            constructor(name,year) {
+                this.name = name;
+                this.year =year;
+            }
+            a1 = 10;
+            f1 = function(){ console.log("car f1함수")};
+            kickname ="";
+        }
+        let myfirstcar = new Car();
+        myfirstcar.f1();
+        myfirstcar.nickname ="붕붕이";
+        console.log(myfirstcar);
+
+        window.a2={};
+        a2.k1 = 10;
+        a2.k2 = function(){console.log("a2의 k2함수- 나이계산")};
+        console.log(a2);
+        a2.k2();
+        a3 = {};
+        a3.k1 ="철수";
+        a3.k2 = function(){console.log("a2의 k2함수 - 나이계산")};
+
+    </script>
+</body>
+</html>
