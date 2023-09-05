@@ -18,6 +18,17 @@
         let maxValue = Math.max(...q3);
         console.log(maxValue);
 
+        const [a,b] = [10, 20];
+        console.log(a); //10
+        const [c,d,e] = q1;
+
+        //immutable 변경 불가!(js에서)
+        //자료형변경을 불가능하게 함. -> 약속되어 있는 것들은 오류 방지를 위해 못 바꾸도록
+        var g = 10; //number
+        g ="aaa"; //string
+        g=[]; //object (Array)
+        g=function(){}; //function
+
         class Car {
             constructor(name,year) {
                 this.name = name;
