@@ -16,7 +16,7 @@ class R018_PropsDatatype extends Component {
                         <p>NumnerProps: {n1}</p>  
                         <span>BooleanProps: {Boolean.toString()}</span>
                         <p>ArrayProps: {Array.toString()}</p>
-                        <p>ObjectJsonProps: {JSON.stringify(o1)}</p>
+                        <p>Object JsonProps: {JSON.stringify(o1)}</p>
                         <p>FunctionProps: {F1}</p>
                     </div>
                     <div style={{padding: "0px"}}>
