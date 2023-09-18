@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+    <div class="ui-widget">
+        <span class="d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user align-middle me-2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r= "4"></circle>
+            </svg>
+            <!-- <input type= "text" class= "form-control manager ml-2" name="tmember" placeholder= "참석자 추가"> -->	
+            <input id="cuser">
+            <datalist id="clist">
+            </datalist>									
+        </span>
+        </div>
+    <script type="text/javascript">
+        $(function() {
+            const attenuser = ["김민성", "이지영", "박준모", "황대경"];
+            $("#cuser").autocomplete({
+                source: attenuser,
+                select: function(event, ui) {
+                    console.log(ui.item);
+                },
+                
+                focus: function(event, ui) {
+                    return false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

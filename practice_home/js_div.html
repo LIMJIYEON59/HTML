@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #b_div {
+        display: none;
+    }
+</style>
+
+<body>
+    <form action="">
+        <div class="dropdown" id="a_div">
+            <p>여기는 A div</p>
+        </div>
+        <div id="b_div">
+            <p>여기는 B div</p>
+        </div>
+    </form>
+    <script>
+        $(function () {
+            if ("조건1") {
+                document.getElementById("a_div").style.display = "none";
+                document.getElementById("b_div").style.display = "";
+            } else { //조건이 아닐때
+                document.getElementById("a_div").style.display = "";
+                document.getElementById("b_div").style.display = "none";
+            }
+        })
+    </script>
+</body>
+
+</html>
