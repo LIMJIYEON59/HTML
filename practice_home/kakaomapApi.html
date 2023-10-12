@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tab">
+        <ul class="nav nav-tabs" role="tablist" id="myTab">
+            <li role="presentation" class="active"><a href="#place1" aria-controls="place1" role="tab" data-toggle="tab">장소1</a></li>
+            <li role="presentation"><a href="#place2" aria-controls="place2" role="tab" data-toggle="tab">장소2</a></li>
+            <li role="presentation"><a href="#place3" aria-controls="place3" role="tab" data-toggle="tab">장소3</a></li>
+            <li role="presentation"><a href="#place4" aria-controls="place4" role="tab" data-toggle="tab">장소4</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="place1">
+                <div class="map" id="map1"></div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="place2">
+                <div class="map" id="map2"></div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="place3">
+                <div class="map" id="map3"></div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="place4">
+                <div class="map" id="map4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+/* place1의 지도 */
+
+var mapContainer1 = document.getElementById('map1'),
+    mapOption1 = {  
+        center: new kakao.maps.LatLng(원하는 위치의 위도, 경도),
+        level: 3
+    };
+var map1 = new kakao.maps.Map(mapContainer1, mapOption1);
+var markerPosition1  = new kakao.maps.LatLng(원하는 위치의 위도, 경도); 
+var marker1 = new kakao.maps.Marker({
+    position: markerPosition1
+});
+marker1.setMap(map1);
+
+/* place2의 지도 */
+    
+var mapContainer2 = document.getElementById('map2'),
+    mapOption2 = { 
+        center: new kakao.maps.LatLng(원하는 위치의 위도, 경도),
+        level: 3
+    };
+var map2 = new kakao.maps.Map(mapContainer2, mapOption2);
+var markerPosition2  = new kakao.maps.LatLng(원하는 위치의 위도, 경도); 
+var marker2 = new kakao.maps.Marker({
+    position: markerPosition2
+});
+marker2.setMap(map2);
+
+/* place3의 지도 */
+
+var mapContainer3 = document.getElementById('map3'),
+    mapOption3 = { 
+        center: new kakao.maps.LatLng(원하는 위치의 위도, 경도),
+        level: 3
+    };
+var map3 = new kakao.maps.Map(mapContainer3, mapOption3);
+var markerPosition3  = new kakao.maps.LatLng(원하는 위치의 위도, 경도); 
+var marker3 = new kakao.maps.Marker({
+    position: markerPosition3
+});
+marker3.setMap(map3);
+
+/* place4의 지도 */
+
+var mapContainer4 = document.getElementById('map4'),
+    mapOption4 = { 
+        center: new kakao.maps.LatLng(원하는 위치의 위도, 경도),
+        level: 3
+    };
+var map4 = new kakao.maps.Map(mapContainer4, mapOption4);
+var markerPosition4  = new kakao.maps.LatLng(원하는 위치의 위도, 경도); 
+var marker4 = new kakao.maps.Marker({
+    position: markerPosition4
+});
+marker4.setMap(map4);
+
+$('#myTab a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show');
+  setTimeout(function(){
+	  map2.relayout();
+	  map2.setCenter(new daum.maps.LatLng(두번째 탭 지도 위치와 경도));
+	  map3.relayout();
+	  map3.setCenter(new daum.maps.LatLng(세번째 탭 지도 위치와 경도));
+	  map4.relayout();
+	  map4.setCenter(new daum.maps.LatLng(네번째 탭 지도 위치와 경도));
+	}, 0);  
+});
+
+
+    </script>
+</body>
+
+</html>
